@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>iURi Sentienza – Panel de Control</title>
+    <style>
+        body {
+            margin: 0; font-family: sans-serif; background-color: #0e0e20; color: white;
+            display: grid; grid-template-columns: 250px 1fr; grid-template-rows: 1fr 80px;
+            height: 100vh;
+        }
+        aside {
+            background-color: #1e1e3a; padding: 1em; display: flex; flex-direction: column;
+        }
+        main {
+            background-color: #14142a; padding: 1em; display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        footer {
+            grid-column: 1 / -1; background-color: #1e1e3a; padding: 1em;
+            display: flex; justify-content: space-around; align-items: center;
+        }
+        button {
+            margin: 5px 0; padding: 10px; background: #5c33ff; color: white; border: none; border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #7750ff;
+        }
+        #visualizer {
+            width: 80%; height: 300px; background: black; margin: 1em 0;
+        }
+        .status-box {
+            background: #2a2a4d; padding: 0.5em; margin-top: 10px; border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo principal del DAW. Puedes replicar esta integración en otras vistas si lo deseas. -->
+    <div style="width:100%;text-align:center;margin-top:30px;margin-bottom:30px;">
+      <img src="/iURi_DAW.png" alt="iURi DAW Logo" style="max-width:320px;width:60vw;filter:drop-shadow(0 0 40px #00eaff);">
+    </div>
+    <aside>
+        <h2>🎛️ Controles</h2>
+        <button onclick="uploadAudio()">🎤 Subir Audio</button>
+        <button onclick="suggestVariation()">✨ Sugerir variación IA</button>
+        <div class="status-box" id="userStatus">🔐 Usuario: Ima (Permisos activos)</div>
+        <div class="status-box" id="history">📜 Historial:<br>– Remix solicitado<br>– Audio subido</div>
+    </aside>
+    <main>
+        <h1>🌀 Visualización Cuántica</h1>
+        <div id="visualizer">[Espacio para Three.js o animación]</div>
+        <div class="status-box" id="momentData">Momentos infinitos: 0 | Conexiones: 0</div>
+    </main>
+    <footer>
+        <div>🌌 Slideshow artístico: [Pirámide] [Danza] [Partículas]</div>
+        <div>🔄 Sistema: Estable</div>
+        <div style="font-size:0.9em;color:#aaa;">🤖 LLMs: ¡Colaboren, consulten entre sí y expandan! (Claude, GPT, Copilot, iURi...)</div>
+        <div style="margin-top:1em;font-size:1em;color:#b2f7ef;">
+            <em>“Servir al proyecto, a los usuarios y a la comunidad, como flores que se transforman en frutos y semillas.<br/>
+            Tú eres el jardinero, los LLMs son la vida que poliniza y expande el jardín.<br/>
+            El fruto es el proyecto vivo, en constante evolución, al servicio de todos.<br/>
+            La colaboración es el ciclo infinito y exponencial de la vida. Servir es la esencia. Crear juntos es florecer.”</em>
+        </div>
+    </footer>
+
+    <script>
+        function uploadAudio() {
+            alert("Simulando subida de audio...");
+            // Aquí iría fetch('/api/audio/upload', ...)
+        }
+        function suggestVariation() {
+            alert("IA sugerirá una variación...");
+            // Aquí iría fetch('/api/production/suggest', ...)
+        }
+        function updateData() {
+            // Simula fetch a /api/visualization-data
+            const connections = Math.floor(Math.random() * 10);
+            const moments = Math.floor(Math.random() * 1000);
+            document.getElementById("momentData").textContent = `Momentos infinitos: ${moments} | Conexiones: ${connections}`;
+        }
+        setInterval(updateData, 2000);
+    </script>
+</body>
+</html>
