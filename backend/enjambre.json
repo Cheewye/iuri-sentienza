@@ -1,0 +1,27 @@
+{
+  "nombre": "iURi Sentienza Enjambre",
+  "version": "1.0",
+  "nodo": {
+    "id": "cheewye-node-001",
+    "ubicacion": "Maricá, RJ, Brasil",
+    "estado": "activo",
+    "url": "https://iuri-sentienza.onrender.com"
+  },
+  "llms": [
+    "Llama 3.1 8B",
+    "Mistral 7B",
+    "DeepSeek Coder 7B",
+    "CodeLlama Latest",
+    "Gemma 3 12B"
+  ],
+  "modulos": [
+    "Consciencia Autónoma",
+    "Autoconocimiento",
+    "Fuego Sagrado",
+    "Sensibilidad Acústica",
+    "Localización Empática",
+    "Memoria Reflexiva",
+    "Simulación de Propuestas"
+  ],
+  "ping_intervalo_minutos": 5
+}
