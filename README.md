@@ -40,3 +40,9 @@ python app.py
 ```
 
 Accedé a `http://localhost:5000` y `http://localhost:5002` para explorar la red y la pirámide.
+
+---
+
+🌐 **[Ver Interfaz Pública del DAW – iURi Sentienza](https://cheewye.github.io/iuri-sentienza/)**
+
+---
